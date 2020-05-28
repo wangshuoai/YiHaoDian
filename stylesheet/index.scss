@@ -1,0 +1,209 @@
+
+//引入公共样式的时候通过 @import 引入  可以省略_ 和.scss后缀
+@import "base";
+@import "mixin";
+
+//版心样式
+.center{
+    width: 1070px;
+    min-width: 1070px;
+    margin: 0 auto;
+}
+
+// 头部样式
+.header {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #eee;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    &:after{
+        @include clearBoth;
+    }
+}
+.header span{
+    font-size: 12px;
+    color: red;
+}
+.header p {
+    float: left;
+    margin-left: 20px;
+}
+
+.header ul {
+    float: right;
+}
+
+.header ul li {
+    float: left;
+    margin-left: 20px;
+}
+
+// logo区域样式
+.top{
+    &:after{
+        @include clearBoth;
+    }
+    .logo, .logo1{
+        float: left;
+    }
+}
+.top .logo img {
+    width: 150px;
+    height: 150px;
+}
+.logo1 img{
+    width: 160px;
+    height: 90px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+.search {
+    float: left;
+    margin-top: 50px;
+    margin-left: 40px;
+    p{
+        height: 19px;
+        margin-top: 6px;
+        overflow: hidden;
+        a{
+            text-decoration: none;
+            float: left;
+            margin-right: 10px;
+            line-height: 19px;
+            font-size: 14px;
+            color: #aaa;
+        }
+    }
+}
+.search input {
+    width: 490px;
+    height: 40px;
+    border: 1px solid #ddd;
+    background: #fcfcfc;
+    border-radius: 50px;
+    outline: 0 none;
+    padding-left: 32px;
+    font-size: 14px;
+    &:hover{
+        border: 1px solid #ff4040;
+    }
+}
+.search img {
+    width: 30px;
+    height: 30px;
+    margin-left: -50px;
+}
+.cart {
+    float: left;
+    margin-top: 50px;
+}
+.cart button{
+    width: 120px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    background-color: transparent;
+    color: #333;
+    text-indent: -11px;
+    margin-left: 60px;
+}
+.cart img {
+    width: 30px;
+    height: 30px;
+}
+
+// 导航区域样式
+.nav{
+    &:after{
+        @include clearBoth;
+    }
+    .goodsClassTitle{
+        width: 140px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        background-color: #ff4040;
+        position: absolute;
+        cursor: pointer;
+        img{
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    .nav-list{
+        padding-left: 140px;
+        font-size: 16px;
+        color: #333;
+        overflow: hidden;
+        height: 100%;
+        line-height: 38px;
+        li{
+            float: left;
+            margin-left: 30px;
+            cursor: pointer;
+            a{
+                color: #333;
+            }
+        }
+    }
+}
+
+//banner区域样式
+.play img {
+    border: none;
+}
+.play {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0 auto 0;
+    overflow: hidden;
+    ol {
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        z-index: 2;
+        li {
+            float: left;
+            margin-right: 3px;
+            display: inline;
+            cursor: pointer;
+            background: #fcf2cf;
+            border: 1px solid #f47500;
+            padding: 2px 6px;
+            color: #d94b01;
+            font-family: arial;
+            font-size: 12px;
+            &.active{
+                padding: 3px 8px;
+                font-weight: bold;
+                color: #ffffff;
+                background: sienna;
+                position: relative;
+                bottom: 2px;
+            }
+        }
+    }
+
+    ul {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        img {
+            float: left;
+            width: 470px;
+            height: 260px;
+        }
+        li {
+            width: 470px;
+            height: 260px;
+            float: left;
+        }
+    }
+}
