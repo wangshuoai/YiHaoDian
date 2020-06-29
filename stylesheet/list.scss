@@ -1,0 +1,225 @@
+@import "base";
+//头部区域
+// logo区域样式
+.mtop{
+    &:after{
+        @include clearBoth;
+    }
+    .logo, .logo1{
+        float: left;
+    }
+  }
+  .mtop .logo img {
+    width: 150px;
+    height: 150px;
+    margin-left: 0 !important;
+    cursor: pointer;
+  }
+  .logo1 img{
+    width: 160px;
+    height: 90px;
+    margin-top: 40px;
+    cursor: pointer;
+  }
+  .search {
+    float: left;
+    margin-top: 50px;
+    margin-left: 20px;
+    input {
+        width: 490px;
+        height: 40px;
+        border: 1px solid #ddd;
+        background: #fcfcfc;
+        border-radius: 50px;
+        outline: 0 none;
+        padding-left: 32px;
+        font-size: 14px;
+        &:hover{
+            border: 1px solid #ff4040;
+        }
+    }
+    img {
+        width: 30px;
+        height: 30px;
+        margin-left: -50px;
+    }
+    p{
+        height: 19px;
+        margin-top: 6px;
+        overflow: hidden;
+        a{
+            text-decoration: none;
+            float: left;
+            margin-right: 10px;
+            line-height: 19px;
+            font-size: 14px;
+            color: #aaa;
+            &:hover{
+              color: red;
+            }
+        }
+    }
+  }
+  .cart {
+    float: left;
+    margin-top: 50px;
+    button{
+        width: 120px;
+        height: 40px;
+        border: 1px solid #ddd;
+        border-radius: 50px;
+        background-color: transparent;
+        color: #333;
+        text-indent: -11px;
+        margin-left: 60px;
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    }
+// 超级单品区域样式
+.superSingle{
+    position: relative;
+    width: 1070px;
+    margin: 0 auto;
+    height: 370px;
+    ul{
+        width: 1050px;
+        height: 432px;
+        margin: 0 auto;
+        position: relative;
+        top: 10px;
+        .single_one{
+            background: none;
+        }
+        li{
+            background-color: #fff;
+            width: 208px;
+            height: 220px;
+            float: left;
+            font-size: 14px;
+            box-shadow: 1px 2px 9px #eee;
+            &:hover{
+                transform: scale(1.1);
+            }
+            a{
+                .single_logo{
+                    width: 129px;
+                    height:50px;
+                    margin-left: 20px;
+                    margin-top: 22px;
+                    cursor: pointer;
+                }
+                .single_text{
+                    width: 180px;
+                    height: 120px;
+                    margin-left: 24px;
+                    position: relative;
+                    overflow: hidden;
+                    .sing_text_font{
+                        font-size: 14px;
+                        color: #fff;
+                        color: rgba(255,255,255,0.8);
+                        display: block;
+                        margin-right: 8px;
+                        float: left;
+                        height: 22px;
+                        float: left;
+                        font-weight: bold;
+                        cursor: pointer;
+                        -webkit-box-sizing: border-box;
+                        -moz-box-sizing: border-box;
+                        box-sizing: border-box;
+                        overflow: hidden;
+                    }
+                    .single_text_line{
+                        border-bottom: 3px solid #fff;
+                        position: absolute;
+                        height: 1px;
+                        width: 28px;
+                        left: 0px;
+                        top: 27px;
+                    }
+                    h2{
+                        position: absolute;
+                        left: 0px;
+                        top: 60px;
+                        color: #fff;
+                        font-size: 32px;
+                        font-family: cursive;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .single_top {
+                width: 210px;
+                height: 150px;
+                background-position: center;
+                background-repeat: no-repeat;
+                text-align: center;
+                position: relative;
+                .s_bz{
+                    height: 24px;
+                    border-radius: 0 0 12px 12px;
+                    color: #fff;
+                    position: relative;
+                    top: 10px;
+                    line-height: 24px;
+                    display: inline-block;
+                    z-index: 1;
+                }
+                .single_top_img{
+                    width: 110px;
+                    height: 110px;
+                    position: absolute;
+                    top: 15px;
+                    left: 50%;
+                    margin-left: -55px;
+                }
+            }
+            .single_bottom {
+                height: 70px;
+                width: 150px;
+                margin: 0 auto;
+                position: relative;
+                .s_title {
+                    width: 153px;
+                    height: 20px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    -o-text-overflow: ellipsis;
+                    text-overflow: ellipsis;
+                }
+                .s_con {
+                    height: 33px;
+                    padding-top: 8px;
+                    position: relative;
+                    overflow: hidden;
+                    text-align: center;
+                    .s_num {
+                        display: inline-block;
+                        font-family: Tahoma,"Microsoft YaHei";
+                        color: #e50113;
+                        font-weight: bold;
+                        font-size: 14px;
+                        .s_num_act {
+                            margin-left: -3px;
+                        }
+                        .s_num_underline {
+                            text-decoration: line-through;
+                            font-size: 12px;
+                            color: #999;
+                            font-weight: normal;
+                            margin-left: 4px;
+                            .s_num_line {
+                                margin-left: -3px;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

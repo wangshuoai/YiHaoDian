@@ -1,0 +1,448 @@
+@charset "UTF-8";
+html, body, ol, ul, dl, li, dt, dd, h1, h2, h3, h4, h5, h6,
+p, form, input, select, textarea, table, td, tr, th, fieldset {
+  margin: 0;
+  padding: 0; }
+
+fieldset,
+img {
+  border: none; }
+
+h1, h2, h3, h4, h5, h6, b, strong, i, em, u {
+  font-weight: normal;
+  font-style: normal; }
+
+ul, ol, li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: #333; }
+
+img {
+  vertical-align: middle; }
+
+/**
+* 头部公共样式
+*/
+.center {
+  width: 1070px;
+  min-width: 1070px;
+  margin: 0 auto; }
+
+.header {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background: #eee;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5; }
+  .header:after {
+    content: "";
+    height: 0;
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden; }
+  .header span {
+    font-size: 12px;
+    color: red; }
+  .header p {
+    float: left;
+    margin-left: 20px; }
+  .header ul {
+    float: right; }
+    .header ul li {
+      float: left;
+      margin-left: 20px; }
+      .header ul li a:hover {
+        color: red; }
+      .header ul li b {
+        color: tomato; }
+    .header ul:nth-of-type(1) {
+      display: block; }
+    .header ul:nth-of-type(2) {
+      display: none; }
+  .header .islogin ul:nth-of-type(1) {
+    display: none; }
+  .header .islogin ul:nth-of-type(2) {
+    display: block; }
+
+.mtop:after {
+  content: "";
+  height: 0;
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden; }
+
+.mtop .logo, .mtop .logo1 {
+  float: left; }
+
+.mtop .logo img {
+  width: 150px;
+  height: 150px;
+  margin-left: -120px;
+  cursor: pointer !important; }
+
+.logo1 img {
+  width: 160px;
+  height: 90px;
+  margin-top: 40px;
+  cursor: pointer; }
+
+.search {
+  float: left;
+  margin-top: 50px;
+  margin-left: 20px; }
+  .search input {
+    width: 490px;
+    height: 40px;
+    border: 1px solid #ddd;
+    background: #fcfcfc;
+    border-radius: 50px;
+    outline: 0 none;
+    padding-left: 32px;
+    font-size: 14px; }
+    .search input:hover {
+      border: 1px solid #ff4040; }
+  .search img {
+    width: 30px;
+    height: 30px;
+    margin-left: -50px; }
+  .search p {
+    height: 19px;
+    margin-top: 6px;
+    overflow: hidden; }
+    .search p a {
+      text-decoration: none;
+      float: left;
+      margin-right: 10px;
+      line-height: 19px;
+      font-size: 14px;
+      color: #aaa; }
+      .search p a:hover {
+        color: red; }
+
+.cart {
+  float: left;
+  margin-top: 50px; }
+  .cart button {
+    width: 120px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    background-color: transparent;
+    color: #333;
+    text-indent: -11px;
+    margin-left: 60px;
+    outline: none;
+    cursor: pointer; }
+    .cart button img {
+      width: 30px;
+      height: 30px; }
+
+.nav {
+  position: relative;
+  margin-bottom: -8px !important; }
+  .nav:after {
+    content: "";
+    height: 0;
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden; }
+  .nav .goodsClassTitle {
+    width: 140px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    background-color: #e50113;
+    position: absolute;
+    cursor: pointer; }
+    .nav .goodsClassTitle img {
+      width: 30px;
+      height: 30px; }
+  .nav .goodsList:hover .classList {
+    display: block; }
+  .nav .classList {
+    display: none;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    width: 1068px;
+    height: 410px;
+    background-color: #fff;
+    border: 1px solid #ff4040;
+    z-index: 1001; }
+    .nav .classList .column-item {
+      display: inline-block;
+      float: left;
+      width: 155px;
+      padding-left: 22px;
+      margin: 30px 0;
+      border-right: 1px solid #e9e9e9;
+      display: inline-block; }
+      .nav .classList .column-item .class-item {
+        vertical-align: middle;
+        width: 100%;
+        height: 175px;
+        position: relative;
+        color: #333;
+        text-align: left; }
+        .nav .classList .column-item .class-item p {
+          font-size: 14px;
+          line-height: 19px;
+          padding-bottom: 12px;
+          white-space: nowrap;
+          overflow: hidden;
+          -o-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+          font-weight: bold; }
+        .nav .classList .column-item .class-item .txt {
+          float: left;
+          width: 50%;
+          display: inline-block;
+          line-height: 16px;
+          margin-bottom: 8px;
+          white-space: nowrap;
+          overflow: hidden;
+          -o-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+          height: 16px;
+          font-size: 12px; }
+          .nav .classList .column-item .class-item .txt a:hover {
+            color: red;
+            text-decoration: none; }
+  .nav .nav-list {
+    padding-left: 140px;
+    font-size: 16px;
+    color: #333;
+    overflow: hidden;
+    height: 100%;
+    line-height: 38px; }
+    .nav .nav-list li {
+      float: left;
+      margin-left: 30px;
+      cursor: pointer; }
+      .nav .nav-list li a {
+        color: #333; }
+
+.top:after {
+  content: "";
+  height: 0;
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden; }
+
+.top .logo, .top .logo1 {
+  float: left; }
+
+.top .logo img {
+  width: 150px;
+  height: 150px;
+  cursor: pointer; }
+
+.logo1 img {
+  width: 160px;
+  height: 90px;
+  margin-top: 40px;
+  cursor: pointer; }
+
+.search {
+  float: left;
+  margin-top: 50px;
+  margin-left: 20px; }
+  .search input {
+    width: 490px;
+    height: 40px;
+    border: 1px solid #ddd;
+    background: #fcfcfc;
+    border-radius: 50px;
+    outline: 0 none;
+    padding-left: 32px;
+    font-size: 14px; }
+    .search input:hover {
+      border: 1px solid #ff4040; }
+  .search img {
+    width: 30px;
+    height: 30px;
+    margin-left: -50px; }
+  .search p {
+    height: 19px;
+    margin-top: 6px;
+    overflow: hidden; }
+    .search p a {
+      text-decoration: none;
+      float: left;
+      margin-right: 10px;
+      line-height: 19px;
+      font-size: 14px;
+      color: #aaa; }
+      .search p a:hover {
+        color: red; }
+
+.nav {
+  position: relative;
+  margin-bottom: -18px !important; }
+
+button:disabled {
+  cursor: not-allowed; }
+
+.shopping {
+  width: 1070px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  position: relative;
+  overflow: hidden; }
+  .shopping .left {
+    float: left; }
+    .shopping .left .girlImg {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      border: 1px solid #eee;
+      cursor: move; }
+      .shopping .left .girlImg img {
+        width: 100%;
+        height: 100%; }
+      .shopping .left .girlImg span {
+        display: none;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        background: rgba(255, 255, 0, 0.3);
+        left: 0;
+        top: 0; }
+    .shopping .left .imgList {
+      width: 420px;
+      margin-top: 20px; }
+      .shopping .left .imgList li {
+        float: left;
+        margin-right: 5px;
+        border: 2px solid transparent;
+        border: 1px solid #ccc; }
+        .shopping .left .imgList li img {
+          width: 93px;
+          display: block; }
+      .shopping .left .imgList .ac {
+        border: 2px solid red; }
+  .shopping .right {
+    float: right;
+    width: 510px;
+    margin-right: 90px; }
+    .shopping .right .price {
+      height: 50px;
+      line-height: 50px;
+      background: #FDE5E0;
+      color: #333;
+      padding: 10px 0 5px 10px;
+      margin-top: 15px;
+      border-top: 2px solid #ffd6d1;
+      border-bottom: 2px solid #ffd6d1; }
+      .shopping .right .price em {
+        color: red;
+        font-size: 30px; }
+    .shopping .right .youhuiquan {
+      height: 50px;
+      line-height: 50px;
+      padding: 10px 0 5px 10px;
+      margin-top: 15px; }
+      .shopping .right .youhuiquan span {
+        height: 20px;
+        line-height: 18px;
+        border: 1px solid #ffd6cf;
+        padding: 0 10px;
+        margin-right: 3px;
+        color: #ff6c5a;
+        border-left-style: dashed;
+        border-right-style: dashed;
+        background-color: #fff4f2;
+        position: relative;
+        font-family: "SimSum",Tahoma; }
+    .shopping .right .cuxiao {
+      height: 50px;
+      line-height: 50px;
+      padding: 10px 0 5px 10px;
+      margin-top: 10px; }
+      .shopping .right .cuxiao span {
+        height: 24px;
+        line-height: 24px;
+        padding: 0 10px;
+        margin-right: 15px;
+        color: #fff;
+        border-left-style: dashed;
+        border-right-style: dashed;
+        background-color: #ff875a;
+        position: relative;
+        font-family: "SimSum",Tahoma; }
+    .shopping .right .priceList {
+      overflow: hidden;
+      margin: 20px 0; }
+      .shopping .right .priceList span {
+        float: left;
+        line-height: 30px;
+        margin-left: 5px;
+        width: 100px;
+        padding-top: 30px; }
+      .shopping .right .priceList li {
+        float: left;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 10px;
+        border: 1px solid #eee;
+        margin-right: 10px;
+        cursor: pointer;
+        margin-top: 5px; }
+      .shopping .right .priceList .ac {
+        border: 1px solid red; }
+    .shopping .right .changeNum {
+      position: relative;
+      margin: 20px 0; }
+      .shopping .right .changeNum input {
+        width: 40px;
+        height: 41px;
+        text-align: center;
+        line-height: 40px;
+        border: 1px solid #ccc;
+        margin-left: 30px; }
+      .shopping .right .changeNum button {
+        height: 22px;
+        width: 20px;
+        background: none;
+        border: 1px solid #ccc;
+        position: absolute;
+        margin-left: 10px; }
+      .shopping .right .changeNum .addBtn {
+        left: 146px;
+        top: 0px; }
+      .shopping .right .changeNum .reduceBtn {
+        left: 146px;
+        top: 21px; }
+    .shopping .right .addCartBtn {
+      height: 40px;
+      width: 140px;
+      background: #ff5c4d;
+      border: none;
+      color: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 20px; }
+  .shopping .bigBox {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 420px;
+    display: none;
+    overflow: hidden;
+    border: 1px solid #ff6c5a; }
+    .shopping .bigBox img {
+      width: 800px;
+      height: 800px;
+      position: absolute;
+      top: 0;
+      left: 0; }

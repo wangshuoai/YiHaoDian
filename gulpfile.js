@@ -31,21 +31,40 @@ gulp.task("scripts", ()=>{
     .pipe(connect.reload());
 })
 
+// 整理json数据
+gulp.task("json", ()=>{
+    return gulp.src("data/*.json")
+    .pipe(gulp.dest("dist/data"))
+    .pipe(connect.reload());
+})
+
+// 整理php文件
+gulp.task("php", ()=>{
+    return gulp.src("user/*.php")
+    .pipe(gulp.dest("dist/user"))
+    .pipe(connect.reload());
+})
+
+// 整理bootstrap文件
+gulp.task("bootstrap",()=>{
+    return gulp.src("bootstrap-3.3.7-dist\\**\\*")
+    .pipe(gulp.dest("dist/bootstrap/"))
+    .pipe(connect.reload());
+})
+
 //处理sass：使用gulp插件gulp-sass gulp-rename gulp-minify-css
 //如果我们要对我们生成css代码进行重命名，一个文件一个任务
 const scss = require("gulp-sass");
 const rename = require("gulp-rename");
 gulp.task("scss1", ()=>{
-    return gulp.src("stylesheet/index.scss")
+    return gulp.src("stylesheet/*.scss")
     .pipe(scss())
-    .pipe(gulp.dest("dist/css"))
-    .pipe(rename("index.min.css"))
     .pipe(gulp.dest("dist/css"))
     .pipe(connect.reload());
 })
 
 //监听发之前将所有的任务去执行一遍
-gulp.task("build",["copy-html", 'images', "scripts", "scss1"], ()=>{
+gulp.task("build",["copy-html", 'images', "scripts", "json", "php", "bootstrap", "scss1"], ()=>{
     console.log("项目建立成功");
 })
 
@@ -54,7 +73,10 @@ gulp.task("watch", ()=>{
     gulp.watch("*.html", ["copy-html"]);
     gulp.watch("*.{jpg,png}", ['images']);
     gulp.watch(["*.js", "!gulpfile.json"], ["scripts"]);
-    gulp.watch("stylesheet/index.scss", ["scss1"]);
+    gulp.watch("stylesheet/*.scss", ["scss1"]);
+    gulp.watch("data/*.json", ["json"]);
+    gulp.watch("user/*.php", ["php"]);
+    gulp.watch("bootstrap-3.3.7-dist", ["bootstrap"]);
 })
 
 // 启动一个临时服务器，不支持运行php

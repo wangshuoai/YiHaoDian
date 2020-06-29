@@ -1,36 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>首页</title>
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <style>
-    </style>
-     
+    <title>详情页</title>
+    <link rel="stylesheet" href="./css/detail.css">
 </head>
 <body>
-    <script type="module" src="./js/index.js"></script>
-    <script src="./js/jquery-1.11.3.js"></script>
-    <script src="./bootstrap/js/bootstrap.min.js"></script>
-    <div id="main">
+    <div id="detail">
         <!-- 头部 -->
         <div id="header" class="header">
             <div class="center">
                 <span>当前地址：上海</span>
                 <p>欢迎来到一号店！</p>
-                <ul>
-                    <li><a href="http://localhost/YiHaoDian/dist/login.html">登录</a></li>
-                    <li><a href="http://localhost/YiHaoDian/dist/register.html">注册</a></li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href="javascript:;">欢迎您<b id="bb">李四</b></a>
-                        <a id="exit" href="javascript:;">退出登录</a>
-                    </li>
-                </ul>
                 <ul>
                     <li><a href="#">会员俱乐部</a></li>
                     <li><a href="#">我的订单</a></li>
@@ -38,15 +20,15 @@
             </div>
         </div>
         <!-- logo区域 -->
-        <div id="top" class="mtop center"">
-                <div class=" logo">
+        <div id="top" class="top center"">
+                <div class=" logo" id="logo">
                 <img src="images/logo.png" alt="">
             </div>
             <div class="logo1">
                 <img src="images/logo1.jpg" alt="">
             </div>
             <div class="search">
-                <input type="text" placeholder="请输入商品" id="searchInput">
+                <input type="text" placeholder="请输入商品">
                 <img src="images/search.png" alt="">
                 <p id="hotKeywordsShow" class="hd_hot_search">
                     <a title="摄像头" target="_blank" href="#">摄像头</a>
@@ -59,9 +41,6 @@
                     <a title="进口食品" target="_blank" href="#">进口食品</a>
                     <a title="汽车配饰" target="_blank" href="#">汽车配饰</a>
                 </p>
-            </div>
-            <div class="cart" id="cart">
-                <button> <img src="images/cart.png" alt=""> 购物车</button>
             </div>
         </div>
         <!-- 导航区域 -->
@@ -86,7 +65,7 @@
                                 <li class="txt"><a href="javascript:;">咖啡冲饮</a></li>
                                 <li class="txt"><a href="javascript:;">麦片冲饮</a></li>
                                 <li class="txt"><a href="javascript:;">母婴玩具</a></li>
-                                <li class="txt"><a href="http://localhost/YiHaoDian/dist/list.html">美妆个护</a></li>
+                                <li class="txt"><a href="javascript:;">美妆个护</a></li>
                             </ul>
                         </div>
                         <!-- 食品/酒/生鲜 -->
@@ -321,186 +300,12 @@
                 </li>
             </ul>
         </div>
-        
-        <!-- 轮播区域 -->
-        <div id="slider" class="slider">
-            <ul>
-                <li><a href="#">
-                        <img src="images/banner.jpg" alt="">
-                        <p>这是第1张图片的文字说明</p>
-                    </a></li>
-                <li><a href="#">
-                        <img src="images/banner1.jpg" alt="">
-                        <p>这是第2张图片的文字说明</p>
-                    </a></li>
-                <li><a href="#">
-                        <img src="images/banner3.jpg" alt="">
-                        <p>这是第3张图片的文字说明</p>
-                    </a></li>
-            </ul>
-             <!--箭头-->
-            <div class="arrow">
-                <span class="arrow-left">&lt;</span>
-                <span class="arrow-right">&gt;</span>
-            </div>
-        </div>
-
-        <!-- 超级单品 -->
-        <div class="superSingle">
-            <ul class="singleGoods">
-
-            </ul>
-        </div>
-        
-        <!-- 甄选新鲜 -->
-        <div class="needLazyLoad">
-            <div class="con_width center">
-                <div class="qua_show">
-                    <a class="spe_tit qua_tit">
-                        <span class="qua_tit_spanFirst qua_tit_spanFirst_top" style="color:#65C73E;">甄选品质</span>
-                        <span class="qua_tit_spanLast" style="color:#99da7e;color:rgba(101,199,62,0.70);">/ 每一次选购都是满意</span>
-                    </a>
-                    <div class="que_show_content">
-                        <img src="images/zx1.jpg" alt="">
-                        <div class="qua_left_con ">
-                            <div>精致女人</div>
-                            <div>科技质感</div>
-                            <div>爆品直降</div>
-                            <div>大牌让利</div>
-                            <div>懂你想要</div>
-                            <div>品质生活</div>
-                        </div>
-                        <div class="qua_right_con">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="qua_top">
-                    <img class="qua_paihang" src="images/paihangbang.png" alt="">
-                    <div class="qua_top_con">
-                        <div class="qua_top_inner">
-                            <ul class="qua_top_goods">
-                                <li class="qua_top_imgCon">
-                                    <div class="qua_imgCon_font">TOP1</div>
-                                    <img src="images/like1.jpg" alt="">
-                                </li>
-                                <li class="qua_top_imgCon">
-                                    <div class="qua_imgCon_font">TOP2</div>
-                                    <img src="images/like2.jpg" alt="">
-                                </li>
-                                <li class="qua_top_imgCon">
-                                    <div class="qua_imgCon_font">TOP3</div>
-                                    <img src="images/like1.jpg" alt="">
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!--  -->
-        <!-- 懂你想要 -->
-        <div class="under_wrap">
-            <div class="underLogo">
-                <img src="images/dongni.png" alt="懂你想要">
-                <p>可能比你自己更懂你</p>
-            </div>
-            <div class="likeList center">
-                <ul class="like_goodsList">
-                    
-                </ul>
-            </div>
-        </div>
-
-        <!-- 分页 -->
-        <nav aria-label="Page navigation" style="float: right; margin-right: 100px;">
-            <ul class="pagination">
-            </ul>
-        </nav>
-        
-        <!-- 底部区域 -->
-        <div class="footer-wrap center">
-            <div class="ft-server">
-                <a href="">
-                    <img src="images/server1.jpg" alt="">
-                    <b>正品保障</b>
-                    <span>满99元 免运费</span>
-                </a>
-                <a href="">
-                    <img src="images/server2.jpg" alt="">
-                    <b>满99包邮</b>
-                    <span>满99元 免运费</span>
-                </a>
-                <a href="">
-                    <img src="images/server1.jpg" alt="">
-                    <b>售后无忧</b>
-                    <span>满99元 免运费</span>
-                </a>
-                <a href="">
-                    <img src="images/server2.jpg" alt="">
-                    <b>准时送达</b>
-                    <span>满99元 免运费</span>
-                </a>
-            </div>
-            <!--  -->
-            <div class="server-zn">
-                <div class="znList">
-                    <dl>
-                        <dt>新手入门</dt>
-                        <dd><a href="#" >购物流程</a></dd>
-                        <dd><a href="#" >会员制度</a></dd>
-                        <dd><a href="#" >订单查询</a></dd>
-                        <dd><a href="#" >服务协议及隐私说明</a></dd>
-                        <dd><a href="#" >网站地图</a></dd>
-                    </dl>
-                    <dl>
-                        <dt>支付方式</dt>
-                        <dd><a href="#" >货到付款</a></dd>
-                        <dd><a href="#" >网上支付</a></dd>
-                        <dd><a href="#" >礼品卡支付</a></dd>
-                        <dd><a href="#" >其他支付</a></dd>
-                    </dl>
-                    <dl>
-                        <dt>配送服务</dt>
-                        <dd><a href="#" >购物流程</a></dd>
-                        <dd><a href="#" >会员制度</a></dd>
-                        <dd><a href="#" >订单查询</a></dd>
-                        <dd><a href="#" >服务协议及隐私说明</a></dd>
-                        <dd><a href="#" >网站地图</a></dd>
-                    </dl>
-                    <dl>
-                        <dt>相关规则</dt>
-                        <dd><a href="#" >购物流程</a></dd>
-                        <dd><a href="#" >会员制度</a></dd>
-                        <dd><a href="#" >订单查询</a></dd>
-                        <dd><a href="#" >服务协议及隐私说明</a></dd>
-                        <dd><a href="#" >网站地图</a></dd>
-                    </dl>
-                    <dl>
-                        <dt>支付方式</dt>
-                        <dd><a href="#" >货到付款</a></dd>
-                        <dd><a href="#" >网上支付</a></dd>
-                        <dd><a href="#" >礼品卡支付</a></dd>
-                        <dd><a href="#" >其他支付</a></dd>
-                    </dl>
-                    <dl>
-                        <dt>配送服务</dt>
-                        <dd><a href="#" >购物流程</a></dd>
-                        <dd><a href="#" >会员制度</a></dd>
-                        <dd><a href="#" >订单查询</a></dd>
-                        <dd><a href="#" >服务协议及隐私说明</a></dd>
-                        <dd><a href="#" >网站地图</a></dd>
-                    </dl>
-                </div>
-            </div>
-            <!--  -->
-            <div class="footer-bottom">
-                <p>
-                    <a href="#">沪ICP备16050468号</a>|<a href="#">经营证照</a>|<a href="#">互联网药品信息服务资格证(沪)-经营性-2017-0006</a>|<a href="#">经营证照</a>|<a href="#">违法和不良信息举报电话：4006063968</a>|<a href="#">沪B2-20170039</a>|<a href="#">沪公网安备 31010502002939号</a>|<a href="#">友情链接</a>|<a href="#">出版物经营许可证</a>|<a href="#">增值电信业务经营许可证</a>
-                </p>
-            </div>
+        <!-- 商品详情 -->
+        <div class="shopping" id="shopping">
+            
         </div>
     </div>
-    
 </body>
+<script type="module" src="./js/detail.js"></script>
 </html>

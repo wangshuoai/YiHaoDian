@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册页</title>
+    <link rel="stylesheet" href="./css/register.css">
+</head>
+<body>
+    <div class="register">
+        <!-- 头部 -->
+        <div id="header" class="header">
+            <div class="center">
+                <span>当前地址：上海</span>
+                <p>欢迎来到一号店！</p>
+                <ul>
+                    <li><a href="http://localhost/YiHaoDian/dist/login.html">去登录</a></li>
+                </ul>
+            </div>
+        </div>
+         <!-- logo区域 -->
+         <div id="top" class="top center"">
+            <div class=" logo">
+                <img src="images/logo.png" alt="">
+            </div>
+        </div>
+        <!--  -->
+        <div class="login_box">
+            <form method="post">
+                <span>用户名:</span>
+                <input type="text" name="username" id="userInput">
+                <br>
+                <span>手机号:</span>
+                <input type="text" name="phone" id="phoneInput">
+                <br>
+                <span>密码:</span>
+                <input type="password" name="pwd" id="pwdInput">
+                <br>
+                <p>点击注册，表示您同意1号店<a href="#">《服务协议及隐私声明》</a></p>
+                <input type="submit" value="注册" id="regBtn">
+            </form> 
+        </div>
+    </div>
+</body>
+<script type="module">
+    import Reg from './js/register.js';
+    new Reg();
+</script>
+</html>

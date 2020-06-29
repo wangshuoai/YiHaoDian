@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <div class="register">
+        <!-- 头部 -->
+        <div id="header" class="header">
+            <div class="center">
+                <span>当前地址：上海</span>
+                <p>欢迎来到一号店！</p>
+                <ul>
+                    <li><a href="http://localhost/YiHaoDian/dist/register.html">去注册</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- logo区域 -->
+        <div id="top" class="top center"">
+            <div class=" logo">
+                <img src="images/logo.png" alt="">
+            </div>
+        </div>
+        <!--  -->
+        <div class="login_box">
+            <form method="post">
+                <span>用户名:</span>
+                <input type="text" name="username" id="userInput">
+                <br>
+                <span>密码:</span>
+                <input type="password" name="pwd" id="pwdInput">
+                <br>
+                <p><a href="#">忘记密码？</a></p>
+                <input type="submit" id="logBtn" value="登录">
+            </form> 
+        </div>
+    </div>
+</body>
+<script type="module">
+    import Login from './js/login.js';
+    new Login();
+</script>
+</html>

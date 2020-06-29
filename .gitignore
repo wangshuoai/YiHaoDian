@@ -1,0 +1,3 @@
+# 代表的是注释
+# 忽略gulp的依赖文件  shopdemo文件下的node-modules
+/node_modules/

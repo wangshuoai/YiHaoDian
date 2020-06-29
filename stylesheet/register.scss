@@ -1,0 +1,77 @@
+//引入公共样式的时候通过 @import 引入  可以省略_ 和.scss后缀
+@import "base";
+
+body{
+    height: 570px;
+    background: url(../images/bg.jpg);
+    background-repeat: no-repeat;   //不重复
+    background-size: 100% 100%;     // 满屏
+}
+.register{
+    .login_box::before{
+        content:"";
+        -webkit-filter: opacity(50%);  
+        filter: opacity(50%);
+        opacity:0.5;//透明度设置
+        z-index:-1;
+        background-size:500px 300px;
+        width:500px; 
+        height:300px;
+        position:absolute;
+        //一定要设置position:absolute,这样才能设置z-index，让背景处于内容的下一层
+        top:0px;
+        left:0px;
+        border-radius:30px;
+    }
+    .login_box{
+        position:fixed;
+        left:50%;
+        top:160px;
+        width:500px;
+        height:360px;
+        background: #fff;
+        margin-left:-250px;
+        border-radius:40px;
+        box-shadow: 1px 3px 10px #aaa;
+        border:1px solid #ccc;
+        text-align:center;
+        form{
+            display:inline-block;
+            margin-top:30px;
+            width: 260px;
+            input{
+                display:block;
+                float: left;
+                width:250px;
+                height:30px;
+                border:1px solid #ccc;
+                outline:none;
+                border-radius:10px;
+                padding-left: 10px;
+                margin-bottom: 10px;
+            }
+            input[type="submit"]{
+                width:250px;
+                height:40px;
+                color: #fff;
+                font-size: 16px;
+                background-color: #e50113;
+                border: none;
+            }
+            span{
+                display: inline-block;
+                float: left;
+                font-size:15px;
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: 10px;
+                margin-top: 20px;
+                margin-left: -20px;
+                a{
+                    color: skyblue;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车页</title>
+    <link rel="stylesheet" href="./css/carts.css">
+</head>
+<body>
+    <!-- 头部 -->
+    <div id="header" class="header">
+        <div class="center">
+            <span>当前地址：上海</span>
+            <p>欢迎来到一号店！</p>
+            <ul>
+                <li><a href="#">会员俱乐部</a></li>
+                <li><a href="#">我的订单</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- logo区域 -->
+    <div id="top" class="top center"">
+        <div class=" logo" id="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+        <div class="logo1">
+            <img src="images/logo1.jpg" alt="">
+        </div>
+        <!--  -->
+    </div>
+    <!-- 购物车列表区域 -->
+    <div class="carts center">
+        <table id="cartTable">
+            <thead>
+                <tr>
+                    <th>
+                        <label>
+                            <input class="check-all check" type="checkbox" />&nbsp;全选</label>
+                    </th>
+                    <th>商品</th>
+                    <th>单价</th>
+                    <th>数量</th>
+                    <th>小计</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--  -->
+            </tbody>
+        </table>
+        <div class="foot" id="foot">
+            <label class="fl select-all">
+                <input type="checkbox" class="check-all check" />&nbsp;全选</label>
+            <a class="fl delete" id="deleteAll" href="javascript:;">删除</a>
+            <div class="fr closing">结 算</div>
+            <div class="fr total">合计：￥
+                <span id="priceTotal">0.00</span>
+            </div>
+            <div class="fr selected" id="selected">已选商品
+                <span id="selectedTotal">0</span>件
+                <span class="arrow up">︽</span>
+                <span class="arrow down">︾</span>
+            </div>
+            <div class="selected-view">
+                <div id="selectedViewList" class="clearfix">
+                    <!--<div><img src="images/1.jpg"><span>取消选择</span></div>-->
+                </div>
+                <span class="arrow">◆
+                    <span>◆</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="./js/carts.js"></script>
+</html>
